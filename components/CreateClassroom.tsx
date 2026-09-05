@@ -3,10 +3,13 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { GraduationCap } from "lucide-react";
+import { sessionStore } from "@/lib/session";
 
 export default function CreateClassroom() {
   const router = useRouter();
-  const [teacherName, setTeacherName] = useState("");
+  const [teacherName, setTeacherName] = useState(
+    () => sessionStore.getSnapshot()?.name || ""
+  );
   const [lessonTopic, setLessonTopic] = useState("Quadratic Equations");
 
   function handleSubmit(e: React.FormEvent) {
@@ -23,9 +26,9 @@ export default function CreateClassroom() {
 
   return (
     <form onSubmit={handleSubmit} className="glass-strong flex flex-col gap-4 rounded-2xl p-6">
-      <div className="flex items-center gap-2 text-cyan-400">
+      <div className="flex items-center gap-2 text-cyan-600">
         <GraduationCap size={18} />
-        <h3 className="font-display text-base font-semibold text-white">Create classroom</h3>
+        <h3 className="font-display text-base font-semibold text-navy-900">Create classroom</h3>
       </div>
       <label className="text-sm text-mist">
         Your name
@@ -33,7 +36,7 @@ export default function CreateClassroom() {
           value={teacherName}
           onChange={(e) => setTeacherName(e.target.value)}
           placeholder="Ms. Rao"
-          className="mt-1 w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400/50"
+          className="mt-1 w-full rounded-lg border border-navy-900/10 bg-navy-900/5 px-3 py-2 text-sm text-navy-900 outline-none focus:border-cyan-400/50"
         />
       </label>
       <label className="text-sm text-mist">
@@ -42,7 +45,7 @@ export default function CreateClassroom() {
           value={lessonTopic}
           onChange={(e) => setLessonTopic(e.target.value)}
           placeholder="Quadratic Equations"
-          className="mt-1 w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400/50"
+          className="mt-1 w-full rounded-lg border border-navy-900/10 bg-navy-900/5 px-3 py-2 text-sm text-navy-900 outline-none focus:border-cyan-400/50"
         />
       </label>
       <button

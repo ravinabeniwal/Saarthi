@@ -20,7 +20,7 @@ export default function Classroom({
     <div className="flex h-[calc(100vh-64px)] flex-col gap-4 p-4 md:p-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="font-display text-xl font-semibold text-white">{lessonTopic}</h1>
+          <h1 className="font-display text-xl font-semibold text-navy-900">{lessonTopic}</h1>
           <p className="text-sm text-mist/60">Channel: {channel}</p>
         </div>
         <ConnectionStatus status={c.connectionStatus} mode={c.mode} />

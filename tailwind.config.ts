@@ -16,18 +16,18 @@ const config: Config = {
           500: "#22c7bd",
           600: "#0fa8a0",
         },
-        mist: "#c9d3ef",
+        mist: "#5b6a8c",
       },
       fontFamily: {
         display: ["var(--font-display)"],
         body: ["var(--font-body)"],
       },
       boxShadow: {
-        glow: "0 0 40px -10px rgba(63, 224, 208, 0.35)",
+        glow: "0 0 40px -10px rgba(34, 199, 189, 0.3)",
       },
       backgroundImage: {
         "grid-fade":
-          "radial-gradient(circle at 20% 20%, rgba(63,224,208,0.08), transparent 40%), radial-gradient(circle at 80% 0%, rgba(63,224,208,0.06), transparent 35%)",
+          "radial-gradient(circle at 20% 20%, rgba(34,199,189,0.10), transparent 40%), radial-gradient(circle at 80% 0%, rgba(34,199,189,0.08), transparent 35%)",
       },
       keyframes: {
         pulseSlow: {

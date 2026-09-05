@@ -10,7 +10,7 @@ export default function InsightChart({
   const max = Math.max(...data.map((d) => d.value), 1);
   return (
     <div className="glass rounded-2xl p-5">
-      <p className="mb-4 text-sm font-medium text-white">{title}</p>
+      <p className="mb-4 text-sm font-medium text-navy-900">{title}</p>
       <div className="space-y-3">
         {data.map((d) => (
           <div key={d.label}>
@@ -18,7 +18,7 @@ export default function InsightChart({
               <span>{d.label}</span>
               <span>{d.value}</span>
             </div>
-            <div className="h-2 w-full overflow-hidden rounded-full bg-white/8">
+            <div className="h-2 w-full overflow-hidden rounded-full bg-navy-900/8">
               <div
                 className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-cyan-300 transition-all duration-700"
                 style={{ width: `${(d.value / max) * 100}%` }}

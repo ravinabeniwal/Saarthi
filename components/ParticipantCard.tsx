@@ -24,14 +24,14 @@ export default function ParticipantCard({ participant }: { participant: Particip
         {isTeacher ? <GraduationCap size={22} /> : <User size={20} />}
       </div>
       <div className="text-center">
-        <p className="text-sm font-medium text-white">{participant.name}</p>
+        <p className="text-sm font-medium text-navy-900">{participant.name}</p>
         <p className="text-[11px] uppercase tracking-wide text-mist/60">{participant.role}</p>
       </div>
       <div className="flex items-center gap-2">
         {participant.connected ? (
-          participant.speaking ? <Mic size={12} className="text-cyan-400" /> : <MicOff size={12} className="text-mist/40" />
+          participant.speaking ? <Mic size={12} className="text-cyan-600" /> : <MicOff size={12} className="text-mist/40" />
         ) : (
-          <span className="text-[10px] text-rose-300">offline</span>
+          <span className="text-[10px] text-rose-600">offline</span>
         )}
         <VoiceIndicator level={participant.audioLevel} active={participant.speaking} color={participant.avatarColor} size="sm" />
       </div>

@@ -26,10 +26,10 @@ export default function ConnectionStatus({
         className={cn(
           "flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium",
           status === "connected"
-            ? "border-cyan-400/30 bg-cyan-400/10 text-cyan-300"
+            ? "border-cyan-400/30 bg-cyan-400/10 text-cyan-600"
             : status === "connecting"
-            ? "border-amber-300/30 bg-amber-300/10 text-amber-200"
-            : "border-rose-400/30 bg-rose-400/10 text-rose-300"
+            ? "border-amber-300/30 bg-amber-300/10 text-amber-700"
+            : "border-rose-400/30 bg-rose-400/10 text-rose-600"
         )}
       >
         {icon}
@@ -39,8 +39,8 @@ export default function ConnectionStatus({
         className={cn(
           "rounded-full border px-3 py-1 text-xs font-medium",
           mode === "live"
-            ? "border-emerald-400/30 bg-emerald-400/10 text-emerald-300"
-            : "border-white/15 bg-white/5 text-mist"
+            ? "border-emerald-400/30 bg-emerald-400/10 text-emerald-600"
+            : "border-navy-900/15 bg-navy-900/5 text-mist"
         )}
       >
         {mode === "live" ? "Agora Live" : "Demo Mode"}

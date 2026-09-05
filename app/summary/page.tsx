@@ -25,7 +25,7 @@ function SummaryInner() {
       <main className="flex-1 space-y-6 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="font-display text-xl font-semibold text-white">Session Summary</h1>
+            <h1 className="font-display text-xl font-semibold text-navy-900">Session Summary</h1>
             <p className="text-sm text-mist/60">{topic} · Channel {channel}</p>
           </div>
           <Link

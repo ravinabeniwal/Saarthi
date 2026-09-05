@@ -26,7 +26,7 @@ function InsightsInner() {
       <Sidebar />
       <main className="flex-1 space-y-6 p-6">
         <div>
-          <h1 className="font-display text-xl font-semibold text-white">Learning-Gap Dashboard</h1>
+          <h1 className="font-display text-xl font-semibold text-navy-900">Learning-Gap Dashboard</h1>
           <p className="text-sm text-mist/60">Live insight into how the class is understanding {topic}</p>
         </div>
 
@@ -38,7 +38,7 @@ function InsightsInner() {
             { label: "Session duration", value: formatDuration(c.durationSeconds) },
           ].map((s) => (
             <div key={s.label} className="glass rounded-2xl p-5">
-              <p className="font-display text-2xl font-semibold text-white">{s.value}</p>
+              <p className="font-display text-2xl font-semibold text-navy-900">{s.value}</p>
               <p className="mt-1 text-xs text-mist/60">{s.label}</p>
             </div>
           ))}

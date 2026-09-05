@@ -16,8 +16,8 @@ export default function SessionSummary({ stats }: { stats: SessionStats }) {
     <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
       {cards.map((c) => (
         <div key={c.label} className="glass rounded-2xl p-5">
-          <c.icon size={18} className="mb-3 text-cyan-400" />
-          <p className="font-display text-2xl font-semibold text-white">{c.value}</p>
+          <c.icon size={18} className="mb-3 text-cyan-600" />
+          <p className="font-display text-2xl font-semibold text-navy-900">{c.value}</p>
           <p className="mt-1 text-xs text-mist/60">{c.label}</p>
         </div>
       ))}

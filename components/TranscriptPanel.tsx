@@ -5,16 +5,16 @@ import type { TranscriptEntry } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 const tagStyles: Record<string, string> = {
-  concept: "border-cyan-400/30 bg-cyan-400/5 text-cyan-300",
-  question: "border-indigo-300/30 bg-indigo-300/5 text-indigo-200",
-  confusion: "border-amber-300/30 bg-amber-300/5 text-amber-200",
+  concept: "border-cyan-400/30 bg-cyan-400/5 text-cyan-600",
+  question: "border-indigo-300/30 bg-indigo-300/5 text-indigo-600",
+  confusion: "border-amber-300/30 bg-amber-300/5 text-amber-700",
   intervention: "border-emerald-300/30 bg-emerald-300/5 text-emerald-200",
 };
 
 const roleColor: Record<string, string> = {
-  teacher: "text-cyan-300",
+  teacher: "text-cyan-600",
   student: "text-mist",
-  saarthi: "text-emerald-300",
+  saarthi: "text-emerald-600",
 };
 
 export default function TranscriptPanel({
@@ -43,7 +43,7 @@ export default function TranscriptPanel({
   return (
     <div className={cn("flex flex-col gap-3 overflow-y-auto", compact ? "max-h-64" : "h-full")}>
       {entries.map((e) => (
-        <div key={e.id} className="animate-rise rounded-xl border border-white/6 bg-white/[0.02] p-3">
+        <div key={e.id} className="animate-rise rounded-xl border border-navy-900/6 bg-navy-900/[0.02] p-3">
           <div className="mb-1 flex items-center justify-between">
             <span className={cn("text-sm font-medium", roleColor[e.role])}>{e.speaker}</span>
             <span className="text-[11px] text-mist/40">

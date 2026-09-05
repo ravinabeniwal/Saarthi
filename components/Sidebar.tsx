@@ -15,7 +15,7 @@ const items = [
 export default function Sidebar() {
   const pathname = usePathname();
   return (
-    <aside className="hidden w-16 shrink-0 flex-col items-center gap-2 border-r border-white/5 py-6 md:flex">
+    <aside className="hidden w-16 shrink-0 flex-col items-center gap-2 border-r border-navy-900/5 py-6 md:flex">
       {items.map((item) => {
         const Icon = item.icon;
         const active = pathname === item.href;
@@ -26,7 +26,7 @@ export default function Sidebar() {
             title={item.label}
             className={cn(
               "flex h-11 w-11 items-center justify-center rounded-xl transition-colors",
-              active ? "bg-cyan-400/15 text-cyan-300" : "text-mist/50 hover:bg-white/5 hover:text-white"
+              active ? "bg-cyan-400/15 text-cyan-600" : "text-mist/50 hover:bg-navy-900/5 hover:text-navy-900"
             )}
           >
             <Icon size={18} />
